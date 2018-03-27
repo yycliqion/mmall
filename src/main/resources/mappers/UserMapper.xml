@@ -163,8 +163,8 @@
     where email = #{email}
   </select>
 
-
     <select id="selectLogin" resultMap="BaseResultMap" parameterType="map">
+        --parameterType 调用java
         SELECT
         -- *???//这样真的好么?答案就是,这样不好.
         <include refid="Base_Column_List"/>
@@ -172,7 +172,6 @@
         where username = #{username}
         and password = #{password}
     </select>
-
 
     <select id="selectQuestionByUsername" resultType="string" parameterType="string">
     select
